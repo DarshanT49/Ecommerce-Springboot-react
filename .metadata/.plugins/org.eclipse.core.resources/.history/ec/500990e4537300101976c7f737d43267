@@ -1,0 +1,27 @@
+package com.web.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.web.model.User;
+import com.web.repository.UserRepo;
+
+@Service
+public class UserServices {
+
+	@Autowired
+	private UserRepo repo;
+	
+	public List<User> getAllUser() {
+		return repo.findAll();
+	}
+
+	public User getUserById(int id) {
+		return repo.findById(id);
+	}
+	
+	
+
+}

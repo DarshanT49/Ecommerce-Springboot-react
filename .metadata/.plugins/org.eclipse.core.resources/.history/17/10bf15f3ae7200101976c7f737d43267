@@ -1,0 +1,29 @@
+package com.web.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.web.model.Product;
+import com.web.repository.ProductRepo;
+
+@Service 
+public class ProductServices {
+
+	@Autowired
+	private ProductRepo repo;
+	
+	
+	public List<Product> getAllProduct() {
+		return repo.findAll();
+	}
+
+
+	public Product getProductById(int id) {
+		return repo.findById(id).orElse(null);
+	}
+
+	
+
+}
