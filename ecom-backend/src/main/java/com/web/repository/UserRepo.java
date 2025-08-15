@@ -1,0 +1,13 @@
+package com.web.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.web.model.User;
+
+public interface UserRepo extends JpaRepository<User, Integer> {
+	
+	User findByUsername(String username);
+	User findByEmail(String email);
+	boolean existsByEmail(String email);
+
+}
