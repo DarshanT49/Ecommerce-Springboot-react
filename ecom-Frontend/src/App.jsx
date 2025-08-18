@@ -7,6 +7,7 @@ import ProductDetails from "./pages/ProductsDetails";
 import Cart from "./pages/Cart";
 import Register from './pages/Register';
 import LoginPage from './pages/Login';
+import UserDashboard from './pages/UserDashboard';
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<LoginPage />} />
+          <Route path='/UserDashboard' element={<UserDashboard />} />
         </Routes>
       </main>
     </div>
