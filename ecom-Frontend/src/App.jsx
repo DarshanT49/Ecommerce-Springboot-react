@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import Register from './pages/Register';
 import LoginPage from './pages/Login';
 import UserDashboard from './pages/UserDashboard';
+import AdminDashboard from './pages/AdminDashboard';
 import './App.css'
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<LoginPage />} />
-          <Route path='/UserDashboard' element={<UserDashboard />} />
+          <Route path='/userdashboard' element={<UserDashboard />} />
+          <Route path='/admindashboard' element={<AdminDashboard />} />
         </Routes>
       </main>
     </div>
